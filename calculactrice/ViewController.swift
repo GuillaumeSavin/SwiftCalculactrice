@@ -51,8 +51,12 @@ class ViewController: UIViewController {
             })
             print("-")
         case "×":
+            applique(operation: *)
             print("x")
         case "÷":
+            applique(operation: {
+                (op1, op2) in op2 / op1
+            })
             print("/")
         default:
             print("operation non connu")
@@ -67,9 +71,6 @@ class ViewController: UIViewController {
     
     func applique(operation: (Double, Double) -> Double) {
         if pileDeNombres.count > 1 {
-            if pileDeNombres.last. {
-                <#code#>
-            }
             valeurAffichee = operation(pileDeNombres.popLast()!, pileDeNombres.popLast()!)
             enter(self)
         }
